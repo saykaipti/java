@@ -1,0 +1,18 @@
+public class Human{
+  public String name = "unknown";
+  int age = 0; //default
+  protected int id = -1;
+  private double balance = 100;
+  public void setMethod(double balance){
+    this.balance = balance ;
+  }
+  public double getMethod(){  
+  return balance;
+  }
+  public void showInfo(){
+    System.out.println("Name: " + name);
+    System.out.println("id: " + id);
+    System.out.println("age: " + age);
+    System.out.println("balance: " + balance);
+  }
+}

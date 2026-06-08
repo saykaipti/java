@@ -1,0 +1,56 @@
+public class Laptop{
+  
+  int serial;
+  String model;
+  int capacity, count;
+  String[] ft;
+  
+  public Laptop(){
+    model = "empty";
+    serial = -1;
+    ft = new String[5];
+    System.out.println("A new laptop has been created");
+  }
+  
+  public Laptop(int s, String m, int c){
+    model = m;
+    serial = s;
+    capacity = c;
+    ft = new String[c];
+    System.out.println("A new laptop has been created with max " + c + " feature(s)");
+  }
+  
+  public void printInfo(){
+    System.out.println("Model:" + model);
+    System.out.println("Serial Number: " + serial);
+    System.out.println("Features: ");
+   if(count == 0){
+     System.out.println("Empty");
+   }
+   else{
+    for(int i = 0; i < count; i++){
+       if(i == count - 1)
+         System.out.println(ft[i]);
+       else
+      System.out.print(ft[i] + ", ");
+     }
+    }
+  }
+  
+  public void addFeature(String f){
+    if(count < ft.length){
+      ft[count] = f;
+      count++;
+    }
+    else{
+      System.out.println("Max capacity reached. No space available");
+    }
+  }
+
+  public void addFeature(String[] arr){
+    for(int i = 0; i < arr.length; i++){
+      addFeature(arr[i]);
+      
+    }
+  }
+}

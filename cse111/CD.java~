@@ -1,0 +1,16 @@
+//Task 03 
+//CD Class 
+public class CD extends Product {
+  public int D ;
+  public String nam_band; 
+  public String G_E ;
+  public CD (int h, String nam_b,int dam,String s, int in , String t_nam){
+    super(h,nam_b,dam);
+    this.D=in;
+    this.nam_band = s;
+    this.G_E= t_nam;
+  }
+  public String printDetail(){
+   return super.getIdTitlePrice()+ "\n" +"Band: "+ nam_band + " Duration: "+ D + " Genre: "+ G_E;
+  }
+}

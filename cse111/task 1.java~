@@ -1,0 +1,21 @@
+public class toy {
+public string name_1;
+  public int numPrice;
+  public toy (String nm1 , int np ){
+    name_1 = nm1 ;
+    numPrice = np
+  System.out.println ("A new toy has been made!");
+ 
+  }
+  
+  public void updatePrice(int np2){
+  numPrice = np2 ;
+}
+public void showPrice{
+System.out.println ("Price :" + numPrice + "taka ");
+}
+public void updateName(string nm2 ){
+System.out.println ("Changing old name :" + name_1 );
+name_1 = nm2
+  System.out.println ("New name : " + name_1);
+}}

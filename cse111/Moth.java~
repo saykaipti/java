@@ -1,0 +1,19 @@
+public class Moth extends Caterpiller {
+  public Moth(String a,int age){
+    super (a,b);
+  }
+  public void transform(){
+    Sytem.out.println("Caterpillar transforms into Moth");
+  }
+  public void eat(int c){
+ energy -=2.5;
+ energy += (2.5*c);
+ Sytem.out.println("Butterfly lost energy due to nocturnal activity");
+  }
+  public void showDetails(){
+ Sytem.out.println ("Food: "+ food);
+ Sytem.out.println( "Age: " + age);
+ Sytem.out.println( "Energy " + energy + "Joules");
+ }
+}
+    

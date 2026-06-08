@@ -1,0 +1,20 @@
+//public class Smartphone{
+//  
+//  //static variable
+//  public static int count = 0;
+//  public static Smartphone[] objects = new Smartphone[100];
+//  
+//  public int price;
+//  public String name;
+////  public int count = 100;
+//  
+//  public Smartphone(String name, int price){
+//    this.name = name;
+//    this.price = price;
+////    int count = -9;
+////    Smartphone.objects[Smartphone.count++] = this;
+//    System.out.println("count: " + ++count);
+////    this.name = "abc";
+//  }
+//  
+//}

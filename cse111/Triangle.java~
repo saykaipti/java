@@ -1,0 +1,40 @@
+//task 3
+public class Triangle {
+  int sideOne ,sideTwo, sideThree ;
+  public Triangle (int sd1 ,int sd2, int sd3){;
+  sideOne = sd1;
+  sideTwo = sd2;
+  sideThree = sd3;  }
+  int perimeter (){
+    return sideOne+ sideTwo+ sideThree;
+  }
+  public String printTriangleType (){
+    if (sideOne == sideTwo && sideTwo == sideThree){
+      return "This is an Equilateral Triangle.";
+    }
+          else if (sideOne == sideTwo || sideTwo == sideThree || sideThree == sideOne){
+        return "This is an Isosceles Triangle.";}
+        else { 
+           return "This is an Scalene Triangle.";
+        }
+  }
+  
+  public void triangleDetails (){
+    System.out.println ("The Three Sides of the Triangle are :" + sideOne + " " + sideTwo + " " + sideThree);
+    System.out.println ("Perimeter : "+ perimeter());
+  }
+    public void compareTriangles ( Triangle triangle) {
+      if (this == triangle ){
+        System.out.println ("These Two  Triangle have same address ");
+      }
+        else if (this.sideOne == triangle.sideOne && this.sideTwo == triangle. sideTwo && this.sideThree == triangle.sideThree){
+              System.out.println(" Addresses are different but the sides of the triangles are equal.");
+        }
+         else if (this.perimeter() == (triangle.sideOne + triangle.sideTwo + triangle.sideThree)){
+              System.out.println(" only perimeter of both triangle is equal  ");
+         }
+              else {
+                
+              System.out.println("Adresses , Lenght of the side and perimeter all are different  ");
+              }}
+        }

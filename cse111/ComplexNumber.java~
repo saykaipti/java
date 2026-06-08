@@ -1,0 +1,15 @@
+//Task 05
+public class ComplexNumber extends RealNumber{
+  public double img_num;
+  public ComplexNumber(){
+    this.img_num= 1.0;
+  }
+  public ComplexNumber(Double M, Double R ){
+    super(M);
+    this.img_num = R;
+    
+  }
+  public String toString (){
+    return super.toString () + "\n" + img_num;
+  }
+}

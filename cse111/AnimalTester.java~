@@ -1,0 +1,36 @@
+public class AnimalTester{
+  public static void main(String[] args){
+    //Inheritance
+    Animal a1 = new Animal();
+    Dog d1 = new Dog("Goofy");
+    d1.info();
+//    Animal a1 = new Animal();
+//    Dog d1 = new Dog();
+  }
+}
+
+class Animal{
+  public String name = "default";
+  
+  public Animal(){
+    System.out.println("Animal created with name " + name);
+  }
+  
+  public void info(){
+    System.out.println("name from parent: " + name);
+  }
+}
+
+class Dog extends Animal{
+  //Dog class's parent is Animal
+  public String sound = "bark";
+  public String name = "nothing";
+  
+  public Dog(String n){
+//    super(); //super points to parent
+    name = n;
+    System.out.println(name);
+    super.name = n;
+//    super(); 
+  }
+}

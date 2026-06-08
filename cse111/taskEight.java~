@@ -1,0 +1,43 @@
+//task 01 
+public class taskEight
+  public static void evenCheacker(int Z){
+  if (Z%2 == 0){
+    System.out.println("Even!!");
+       }
+  else { 
+      System.out.println("Odd!!");
+     }
+   }
+public static boolean isEven (int Z){
+    return Z %2 ==0 ;
+     }
+
+    public static boolean isPos (int Z){
+    return  Z<0 ;
+     }
+      public static void sequence(int Z){
+        if (Z>0){
+          for (int a = 0; a <= Z ; a++){
+            if (isEven(a)){
+              System.out.println(a + " ");
+            }
+              }
+          else{
+              
+              for (int a = Z; a <= 0; a++){
+              (!isEven(a)){
+              System.out.println(a + " ");
+            }
+              }
+          }
+    
+              System.out.println();
+        }
+        evenChecker(12);
+        boolean result1 = (isEven(14));
+        System.out.println(result1);
+        
+        boolean result2 = (isPos(-14));
+        System.out.println(result2);
+        sequence(-5);
+      }}

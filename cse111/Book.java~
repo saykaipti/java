@@ -1,0 +1,13 @@
+//Task 03
+public class Book extends Product{
+  public String A ;
+  public String NameOfPublisher; 
+  public Book (int h, String nam_b,int dam, String in , String p_nam){
+    super(h,nam_b,dam);
+    this.A=in;
+    this.NameOfPublisher = p_nam;
+  }
+  public String printDetail(){
+     return super.getIdTitlePrice()+ "\n" + "ISBN: "+ A+ " Publisher: "+ NameOfPublisher ;
+  }
+}

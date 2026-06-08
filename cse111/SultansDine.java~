@@ -1,0 +1,52 @@
+class SultansDine {
+
+    // 2 static variables
+    public static int totalBranches = 0;
+    public static int totalSell = 0;
+
+    // static array to store branch objects (or info)
+    public static SultansDine[] branches = new SultansDine[100];
+
+    // instance variables
+    private String branchName;
+    private int branchSell;
+
+    // constructor
+    public SultansDine(String name) {
+        this.branchName = name;
+        this.branchSell = 0; // initially no sell
+        // store this branch in static array
+        branches[totalBranches] = this;
+        totalBranches++;
+    }
+
+    // calculate branch sell based on quantity
+    public void sellQuantity(int quantity) {
+        if (quantity < 10) {
+            branchSell = quantity * 300;
+        } else if (quantity < 20) {
+            branchSell = quantity * 350;
+        } else {
+            branchSell = quantity * 400;
+        }
+        totalSell += branchSell;
+    }
+
+    // display branch information and percentage
+    public void branchInformation() {
+        System.out.println("Branch Name: " + branchName);
+        System.out.println("Branch Sell: " + branchSell + " Taka");
+    }
+
+    // static method to show total details
+    public static void details() {
+        System.out.println("Total Number of branch(s): " + totalBranches);
+        System.out.println("Total Sell: " + totalSell + " Taka");
+        for (int i = 0; i < totalBranches; i++) {
+            SultansDine b = branches[i];
+            double percentage = totalSell == 0 ? 0 : ((double) b.branchSell / totalSell) * 100;
+            System.out.printf("Branch Name: %s, Branch Sell: %d Taka\n", b.branchName, b.branchSell);
+            System.out.printf("Branch consists of total sell's %.2f \n", percentage);
+        }
+    }
+}

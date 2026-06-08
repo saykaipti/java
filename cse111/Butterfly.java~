@@ -1,0 +1,19 @@
+public class Butterfly extends Caterpiller {
+  public Butterfly(String a,int age){
+    super (a,b);
+  }
+  public void transform(){
+    Sytem.out.println("Caterpillar transforms into Butterfly");
+  }
+  public void eat(int c){
+ energy -=5;
+ energy += (5*c);
+ Sytem.out.println("Butterfly lost energy while flying and absorbed nectar");
+  }
+  public void showDetails(){
+ Sytem.out.println ("Food: "+ food);
+ Sytem.out.println( "Age: " + age);
+ Sytem.out.println( "Energy " + energy + "Joules");
+ }
+}
+    

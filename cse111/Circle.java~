@@ -1,0 +1,7 @@
+class Circle extends Shape {
+    double radius;
+
+    double area() {
+        return Math.PI * radius * radius;
+    }
+}

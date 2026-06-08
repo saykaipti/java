@@ -1,0 +1,30 @@
+ //task 4
+// team class
+class Team {
+  String nameOfTeam;
+  Player [] player = new Player [2] ;
+  int countPlayer =  0;
+  public Team (){
+  }
+  public Team (String nmt )
+  { nameOfTeam = nmt;  
+    }
+  public void updateName (String teamName){
+    nameOfTeam = teamName ;
+  }
+  
+  public void addPlayer (Player pl1 ){
+    if (countPlayer < player.length){
+      player[countPlayer] = pl1;
+      countPlayer ++;
+    }
+  }
+  public void printDetail(){
+    System.out.println ("Team:" + nameOfTeam );
+    System.out.println ("List Of Players ");
+    for (int i = 0 ; i < countPlayer ; i ++){
+      Player Pr = player[i] ;
+      if (Pr != null )
+        Pr.printInfo();
+    }}}
+  

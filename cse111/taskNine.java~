@@ -1,0 +1,25 @@
+//Task 08
+import java.util.Scanner;
+public class taskNine{
+  
+  public static int fibonacci( int V ){
+    if (V==0) return 0;
+    else if (V==1) return 1;
+    else  return fibonacci(V-1)+fibonacci(V-2);
+    
+    
+   
+  }
+  public static void main(String[]args){
+      Scanner sc =new Scanner (System.in);
+    
+   
+    //int V = sc.nextInt();
+    
+ System.out.print(fibonacci(15));
+    
+   
+    
+ 
+             
+  }}

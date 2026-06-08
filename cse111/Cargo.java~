@@ -1,0 +1,44 @@
+//Task 03 
+public class Cargo {
+  public int id_car ;
+  public String content_c ;
+  public double ojon_car;
+  public boolean cLoad ;
+  public static int ct = 1 ;
+  public static double total_ojon ;
+  public static double max_ojon = 10.0;
+  public Cargo (String m ,double e){
+    this.content_c = m ;
+    this.ojon_car =  e;
+    this.cLoad = false ;
+   this.id_car =  ct ;
+   ct ++;
+  }
+  public void load (){
+    if (!cLoad){
+      if (total_ojon+ojon_car<=max_ojon){
+        cLoad = true;
+        total_ojon+=ojon_car;
+        System.out.println("Cargo "+ id_car +"loaded for transport. ");
+      }
+      else {
+    System.out.println("Cannot load cargo,exceeds weight capacity. ");
+      }
+    }
+  }
+  public void unload(){
+    if(cLoad){
+      cLoad= false;
+         total_ojon-=ojon_car;
+         
+    System.out.println("Cargo"+ id_car +"unloaded. ");
+    }
+  }
+  public void details(){
+    System.out.println("Cargo ID: "+ id_car +", Contents: " + content_c + ",");
+    System.out.println("Weight: "+ ojon_car +"loaded: " + cLoad);
+    
+  }
+  public static double capacity(){
+    return  max_ojon-total_ojon;
+  }}

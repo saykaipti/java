@@ -1,0 +1,33 @@
+// Task 01
+public class Developer extends Employee {
+  public String bhasa ;
+ 
+  public Developer (String x, double t, int g, String ai){
+  super(x,t,g);
+  this.bhasa = ai;
+}
+public void calculateSalary(){
+      
+      double kdb = getBaseSalary();
+  
+   if (bhasa.equals("Java")){
+   kdb +=700;
+
+   }}
+public void displayInfo(){
+    super.displayInfo();
+    System.out.println ("Language: "+ bhasa );
+      double kdb = getBaseSalary();
+  
+   if (bhasa.equals("Java")){
+   kdb +=700;
+    System.out.println ("Final Salary : "+ kdb);
+    
+  
+   } else {
+     System.out.println ("Final Salary : $"+ getBaseSalary() );}
+}}
+  
+
+
+

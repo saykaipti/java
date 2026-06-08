@@ -1,0 +1,14 @@
+public class Dog extends Animal{
+  public int naam_d:
+  public dog (){
+    super ();
+    System.out.println("The dog says hello!")
+  }
+  public updateSound(String f){
+    this.sound= f ;
+  }
+  public void details(){
+    System.out.println("Name:" + naam_d) ;
+    super.details()
+  }
+}

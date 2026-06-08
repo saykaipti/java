@@ -1,0 +1,22 @@
+//task 1 
+public class Toy {
+ String name;
+  int price;
+  public Toy (String nmu1 , int np1 ){
+    name = nmu1 ;
+    price = np1;
+  System.out.println ("A new toy has been made!");
+ 
+  }
+  
+  public void updatePrice(int np2){
+ price= np2 ;
+}
+public void showPrice(){
+System.out.println ("Price :" + price + "taka ");
+}
+public void updateName(String nmu2 ){
+  System.out.println ("Changing old name :" + name );
+name = nmu2;
+  System.out.println ("New name : " + name );
+}}

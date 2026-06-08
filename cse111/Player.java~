@@ -1,0 +1,37 @@
+//Task 01 
+public class Player {
+  public String name_p;
+  public int jer_num;
+  public String name_coun;
+  public static int total = 0;
+  public static String[]all= new String[11];
+  public Player (String lp , String cn, int nm){
+    this.name_p = lp ;
+    this.name_coun= cn ;
+    this.jer_num = nm ; 
+    if (total<11){
+      all[total]= name_p; 
+        total ++;
+      
+    }
+  }
+  public String player_detail(){
+    return "Player name :"  + name_p + "\n"+
+  "Country name :"+ name_coun + "\n"+
+  "Jersey number :"+ jer_num; 
+  }
+  public static void info (){ 
+  System.out.println ("Total number of players : "+ total);
+  System.out.println ("Player enlisted so far  :");
+  for (int m = 0 ; m< total ; m++){
+     String L= all[m];
+      System.out.print  (L );
+    if (m<total-1){
+   System.out.print (",");
+   
+    }
+  }
+       System.out.println ();
+    
+  }
+  }

@@ -1,0 +1,10 @@
+//task04
+public class CSECourse{
+  String courseName;
+  String courseCode;
+  int credit;
+  public CSECourse (){
+    courseName= "Programming Language II" ;
+    courseCode ="CSE111";
+    credit = 3 ;
+  }}

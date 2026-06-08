@@ -1,0 +1,49 @@
+//task 02 
+public class Concert {
+  public String ven;
+  public String st;
+  public String [] artists;
+  public int ac;
+  public int tc;
+  public static int ttc ;
+  public Concert(String v,String st ){
+  ven=v;
+  this.st= st;
+  this.artists=new String [5];
+  ac=0;
+  tc=0;
+  }
+  public void addArtist(String a){
+    if (ac<5){
+      artists[ac]=a;
+      ac++;
+    }}
+  public void buyTicket(String z, int y){
+   int pr;
+   if(z.equals("A")){
+     pr = 500;}
+  else if(z.equals("B")){
+    pr = 1000;}
+  else {
+    pr= 2000;
+  }
+  System.out.println("Total price : "+ (pr*y));
+  tc+=y;
+  ttc+=y;
+  }
+  public void buyTicket (String g){
+ buyTicket(g,1);   
+  }
+  public void showDetails(){
+    System.out.println("Venue: " + ven);
+    System.out.println("Showtime: " + st);
+    System.out.println("Artist: " );
+    for(int i = 0;i<ac;i++){
+    System.out.println("-" + artists[i]);
+    }
+  System.out.println("Ticket sold in this concert :" + tc);
+  }
+  public static void showTotalTicketsSold(){
+  System.out.println("Ticket sold in (all venue) " + ttc);  
+  }}
+  

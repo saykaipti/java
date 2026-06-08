@@ -1,0 +1,67 @@
+public class Shop {
+  public int cap ;
+  public int ct;
+  public String nm;
+  public String[] itnm;
+  public int []itpr;
+  public Shop (String x, int y){
+  this.nm =x;
+  this.cap= y;
+  itnm= new String [cap];
+  itpr = new int [cap];
+  ct = 0 ;
+  System.out.println(nm+ " shop created!");
+  }
+  public Shop(int cap){
+  System.out.println( " Mega shop created!");
+  }
+  public void info(){
+System.out.println( " Shop Name: " + nm);  
+System.out.println( " Item Details ");
+if (ct ==0){
+  System.out.println( " No item in shop ");}
+else {
+   System.out.println( ct+ " / " + cap);
+ for(int i=0;i<ct;i++) {
+System.out.println(itnm[i]+" - "+itpr[i] +" Tk");
+ }}} 
+  public void addItem(Sting a ,int p){
+    if (ct<cap){
+ itnm[ct] = a;
+ itpr[ct] = p ;
+ ct++;
+    }
+    else{
+System.out.println(a + ", could not be added");
+    }}
+  public void purcahase (String c ) {
+   boolean info = false;
+   for (int i =0;i<ct;i++){
+     if (itnm[i]==c){
+  info==true;
+  for (int k =i ;k<ct-1;k++){
+ itnm[k] = itnm[k+1];
+ itpr[k]= itpr[k+1];
+  }
+  ct--;
+ System.out.println(" Purchase Complete ");
+     }}
+   if (info!= true){
+  System.out.println(nm + ", is not available in this shop");
+   }}
+   public void addItem(Shop k , String nm) {
+   boolean info = false;
+   for (int i =0;i<k.length;i++){
+     if (k.itnm[i]==c){
+       itpr[ct]= k.itpr[i];
+  info==true;
+  ct++;
+    break;
+  } 
+   if (info!= true){
+  System.out.println(nm + ", is not available in this shop");
+   }}}}
+
+
+  
+ 

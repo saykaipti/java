@@ -1,0 +1,6 @@
+public class ImaginaryNumber{
+  int A1 = 0 ;
+  int A2 = 0 ;
+  public String PrintNumber() {
+    return A1 +" + " + A2+"i";
+  }}

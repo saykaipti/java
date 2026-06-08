@@ -1,0 +1,8 @@
+// Task 03
+public class CSE111Student extends Student {
+  public String pg = "I love Java Programming " ;
+  public String shout (){
+    return pg;
+  }public String msg = pg;
+}
+    

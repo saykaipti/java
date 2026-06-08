@@ -1,0 +1,42 @@
+// task 03
+public class Employee{
+ String em_name;
+ double em_salary;
+ String position;
+ public void newEmployee(String name) {
+   em_name = name;
+   em_salary = 30000.0;
+   position = " junior ";
+ }
+ public void displayInfo(){
+ System.out.println("Employee Name : " + em_name);
+ System.out.println("Employee Salary : " + em_salary + " tk " );
+ System.out.println("Employee Designation : " + position );  
+ }
+ public void calculateTax(){
+   if (em_salary > 50000.0) {
+  double tax = em_salary * 0.30;
+ System.out.println( em_name + " Tax Amount " + tax + " tk " );  
+ }
+   else {
+  System.out.println("No need to pay tax" );
+ }
+ }
+ public void promoteEmployee(String A){
+   if (A=="senior"){
+      em_salary =  em_salary+ 25000.0;
+      position = "senior" ;
+   }
+ else if  (A=="lead"){
+      em_salary =  em_salary+ 50000.0;
+      position = " lead" ;
+   }
+ else if  (A=="manager"){
+      em_salary =  em_salary+ 75000.0;
+      position = " manager" ;
+   }
+  System.out.println(em_name + " has promoted to " + position);
+  System.out.println( "New salary " +   em_salary + " tk" );
+ }}
+ 
+ 

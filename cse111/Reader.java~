@@ -1,0 +1,48 @@
+public class Reader {
+  public int b_C;
+  public int ct;
+  public String nm;
+  public String [] b_collection ;
+  public Reader (String A){
+    this.nm=A;
+    this.ct=2;
+    this.b_collection = new string[ct];
+    this.b_C=0;
+System.out.println("A new reader is created!") ;
+  }
+  public void addBook(String B){
+if (b_C>= capacity) {
+System.out.println("No more capacity");
+ return;
+}
+for(int i= 0; i <b_C; i++){
+  if (b_collection[i]==B){
+System.out.println("No more capacity");
+ return; 
+}}
+b_collection[b_C]= B;
+b_C++;
+}
+ public void readerInfo(){
+   System.out.println("Name:"+ nm);
+ System.out.println ("Capacity:"+ ct);
+System.out.println ("Books :");
+if (b_C==0){
+ System.out.println( "No books added yet");  
+}else {
+ for (int i=0; i <b_C; i++) {
+System.out.println("Book "+(i+1) + ": " + b_collection[i]);
+ } }
+ }
+ public void updateCapacity(int C){
+   if (C>ct){
+  String b_collection2 = new String[C];
+  for (int i=0; i <b_C; i++){
+    b_collection2[i] = b_collection[i];
+  }
+    b_collection = b_collection2 
+ct= C;
+System.out.println("Capacity has changed to " +ct);    
+  }}}
+
+ 

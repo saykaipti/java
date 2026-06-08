@@ -1,0 +1,35 @@
+//spaceship class task 04
+public class Spaceship {
+  String naam ;
+  int cy;
+  Cargo[]cargos= new Cargo[100];
+  int ct =0;
+  int r_ojon = 0;
+  //int p ;
+  public Spaceship (String h, int l){
+    naam = h;
+    cy = l;
+  }
+  public void loadCargo(Cargo s){
+    if (r_ojon + s.getOjon()<=cy && ct<100 ){
+        cargos[ct]= s;
+      ct++;
+          r_ojon+=s.getOjon();
+            }
+    else  {
+       int p = (r_ojon+ s.getOjon())-cy;
+      System.out.println("Warning: unable to load "+ s.getNam()+" inside "+ naam+ ". Exceeds capacity by"+ p);
+     
+    }}
+  public void displayDetails(){
+    System.out.println("Spaceship Name: "+ naam);
+    System.out.println("Capacity: "+ cy);
+    System.out.println("Current cargo weight: "+ r_ojon);
+    System.out.println("Cargo:");
+      int f = 0 ;
+      while (f<ct){
+        System.out.println(cargos[f].getNam()+ " ");
+        f++;
+      }
+      System.out.println();
+  }}
